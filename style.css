@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #675afe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* styliser le conteneur pour les eentres */
+.container{
+    background-color: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: 0;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+/* Personnaliser le boutton d'envoi */
+input[type="submit"]{
+    background-color: #675afe;
+    color: #fff;
+    border: 1px solid #675afe;
+}
+
+/* Personnaliser la boite message */
+#message{
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 6px;
+    width: 350px;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    animation: anime 0.5s ease-out;
+}
+
+/* Animation message */
+@keyframes anime{
+    from{
+        transform: translateY(100px);
+    }
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#message p{
+    margin-left: 7px;
+    padding: 7px 0;
+    font-size: 15px;
+}
+
+/* Lorsque les exigences sont erronees */
+.invalid{
+    color: red;
+}
+
+.invalid:before{
+    position: relative;
+    left: -7px;
+    content: "\2716"; /* Unicode croix rouge */
+}
+
+/* Lorsque les exigences sont repectees */
+.valid{
+    color: green;
+}
+
+.valid:before{
+    position: relative;
+    left: -7px;
+    content: "\2714"; /* Unicode check vert */
+}
+
+.footer {
+    width: 100vw;
+    text-align: center;
+    padding: 15px 0 10px 0;
+    background: #fff;
+    color: #675afe;
+    font-weight: bold;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+  flex: 1;
+}
+
+.toggle-psw {
+  cursor: pointer;
+  font-size: 22px;
+  margin-left: -30px;
+  user-select: none;
+  color: #675afe;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.toggle-psw svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.toggle-psw:hover {
+  color: #3a2fa0;
+}

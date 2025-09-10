@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification mot de passe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Favicon.jpg">
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <label>Nom Utilisateur</label>
+        <input type="text" required />
+        <label>Mot de passe</label>
+        <div class="password-wrapper">
+          <input type="password" id="psw" required />
+          <span id="togglePsw" class="toggle-psw" title="Afficher/Masquer le mot de passe">
+            <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg id="eyeClosed" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="9" ry="5"/><line x1="1" y1="23" x2="23" y2="1"/></svg>
+          </span>
+        </div>
+        <input type="submit" value="Envoyer" />
+      </form>
+    </div>
+
+    <div id="message">
+      <h3>Le mot de passe doit contenir les elements suivants</h3>
+      <p id="letter" class="invalid">Une lettre minuscule</p>
+      <p id="capital" class="invalid">Une lettre majuscule</p>
+      <p id="number" class="invalid">Un chiffre</p>
+      <p id="lenght" class="invalid">8 caracteres minimum</p>
+    </div>
+
+    <script src="script.js"></script>
+    <footer class="footer">&copy; Aubin 2025 - Conçu avec passion</footer>
+  </body>
+</html>
